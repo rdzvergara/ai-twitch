@@ -1,0 +1,459 @@
+#include <stdio.h> /*Biblioteca Padrão*/
+#include <math.h>  /*Biblioteca para questões matemáticas*/
+#include <stdlib.h> /*Biblioteca para conversão de var.*/
+#include <time.h>  /*Biblioteca para definição de tempo*/
+#include <string.h> /*Biblioteca de String*/
+#include <iostream> /*Biblioteca Padrão de C++*/
+#include <Windows.h> /*Biblioteca para Windows */
+#include <locale.h> /*Biblioteca para acentuação*/
+#define gets(a) fgets(a,sizeof(a),stdin);  a[strcspn(a, "\n")] = '\0';
+#define t 500
+int main () {
+	setlocale(LC_ALL, "Portuguese");
+	char word[t],word1[t],word2[t],word3[t],word4[t],wordend[t];
+	int av;
+	int i;
+    printf ("Bem vindo ao Nosso Suporte!\n");
+	while(1){
+      printf("\nEm que posso lhe servir? \n ");
+   	  printf("A-Categorias.  \n ");
+	  printf("B-Suporte. \n ");
+	  printf("C-Twitch Prime. \n ");
+	  printf("X-Sair.\n\n");
+	  printf("-");
+	  gets(word);
+	  int z=strlen(word);
+	 //Cin >> É igual a scanf //
+	// Cout << É igual a printf //
+	if (strstr(word,"nada")!=0||strstr(word,"Nada")!=0||strstr(word,"nop")!=0||strstr(word,"Nop")!=0||strcmp(word,"X")==0||strcmp(word,"x")==0||strstr(word,"Sair")!=0||strstr(word,"sair")!=0){  /* Inicio de X-Nope */ /*strstr=1 se verdadeiro e strcmp=0 se verdadeiro */
+	    goto fim;
+}   /* Fim de X-Nope */
+ 	
+	if (strstr(word,"Luiz")!=0||strstr(word,"Gay")!=0){
+		printf("Verdade Absoluta.\n");
+	
+	}
+	if (strstr(word,"Rodrigo")!=0){
+		printf("Louvai o Criador!\n");
+	}
+	if (strstr(word,"Twitch Prime")!=0||strcmp(word,"C")==0||strcmp(word,"c")==0){  /*C-Twitch Prime*/
+		printf("\nTwitch Prime é um plano que providencia jogos gratuitos, itens, exclusividades e surpresas....\nSeu custo: R$ 7,90 pelos primeiros 6 meses, R$ 14,90 depois disso.\n");
+		printf("Voce deseja adquirir o Twitch Prime? S/N\n");
+		printf("\n-");
+		gets(word1);
+			if(strcmp(word1,"S")==0||strcmp(word1,"s")==0||strstr(word1,"Sim")!=0||strstr(word1,"sim")!=0){
+				system("start iexplore.exe https://www.twitch.tv/prime");
+			} 
+       printf("\n\n-Necessita de Algo mais? S/N\n");
+		 	  printf("\n-");
+		    gets(wordend);
+			if(strcmp(wordend,"n")==0||strcmp(wordend,"N")==0||strstr(wordend,"Nao")!=0||strstr(wordend,"nao")!=0){
+				goto fim;
+			
+	} 
+    } 
+	
+	 if (strstr(word,"Suporte")!=0||strcmp(word,"B")==0||strstr(word,"suporte")!=0||strcmp(word,"b")==0){ /*Inicio do B-Suporte */
+	 	printf("\nEm que posso lhe ajudar?");
+	 	printf("\nA-Problemas de Conta/Login.");
+	 	printf("\nB-Geral.");
+	 	printf("\nC-Problemas de Pagamento.");
+	 	printf("\nD-Aplicativos.");
+	 	printf("\nX-Nada.\n\n-");
+	 	gets(word2);
+	 	 if (strstr(word2,"Login")!=0||strstr(word2,"login")!=0||strstr(word2,"Conta")!=0||strstr(word2,"conta")!=0||strcmp(word2,"A")==0||strcmp(word2,"a")==0){
+	 	printf("\nProblemas de Conta/Login:\n");
+	 	printf("A-Conta Hackeada,O que Fazer?\n");
+	 	printf("B-Sobre suspensões de conta e banimentos do chat.\n");
+	 	printf("C-Autenticação em dois fatores com Authy.\n");
+	 	printf("D-Políticas de renomeação e reciclagem de nomes de usuário.\n\n-");
+	 	gets(word3);
+	 	 if (strcmp(word3,"A")==0||strcmp(word3,"a")==0){
+	 	 	printf("\n=> Conta Hackeada,O que Fazer?\n");
+	 	 	printf("\nSe você acredita que sua conta foi comprometida, é muito importante que você altere sua senha o mais rápido possível. \n");
+	        printf("Recomendamos também que você configure imediatamente a autenticação de dois fatores (2FA) para fornecer uma camada adicional de segurança.\n");
+	 	 	printf("Alguns dos sinais mais óbvios da sua conta serem comprometidos são compostos por:\n");
+	 	 	printf("1-Alterações nas configurações da sua conta ou no perfil que você não fez.\n");
+	 	 	printf("2-Compras não reconhecidas.\n");
+	 	 	printf("3-Não é possível fazer o login com suas credenciais.\n");
+	 	 	printf("4-Recebendo notificações para criadores de conteúdo que você não seguiu.\n");
+	 	 	printf("5-Mensagens que voce não enviou.\n\n");
+	 	 	printf("Para proteger sua conta, recomendamos seguir as etapas abaixo:\n");
+	 	 	printf("=> Excluir formas de pagamento - se você percebeu compras não reconhecidas, recomendamos que você exclua todos os métodos de \n");
+		    printf("pagamento salvos no momento . Isso garantirá que nenhuma compra adicional possa ser feita enquanto sua conta estiver sendo protegida.\n");
+	 	 	printf("=> Alterar sua senha - use uma senha exclusiva que você não tenha usado em nenhum outro lugar. Uma combinação de letras, números e símbolos,\n"); 
+			printf("bem como o tamanho significativo da senha, são contribuidores para ter uma senha forte.\n");
+	 	 	printf("=> Verifique o e-mail da sua conta - Verifique nas configurações de segurança do Twitch se o endereço de e-mail da conta ainda é seu endereço de e-mail. \n");
+		    printf("Se não for, recomendamos tentar alterar o endereço de e-mail para o que você tem acesso o mais rápido possível.\n");
+	 	 	printf("=> Proteja seu e-mail - Para proteger melhor sua conta do Twitch, recomendamos que você altere sua senha no e-mail associado à sua conta do Twitch.\n");
+			printf("Isso é especialmente importante se a senha da sua conta do Twitch for igual à sua senha de e-mail. \n");
+			printf("Também recomendamos configurar a autenticação de dois fatores em seu e-mail, se estiver disponível através de seu provedor de e-mail.\n");
+	 	 	printf("=> Configurar autenticação de dois fatores - 2FA fornece uma camada adicional de segurança para sua conta.\n");
+			printf("É uma ótima ferramenta para garantir que o acesso à sua conta seja limitado apenas a você.\n ");
+	 	 	printf("=> Remover conexões - no passado, você pode ter permitido o acesso limitado de aplicativos de terceiros à sua conta.\n");
+			printf(" Para proteger sua conta completamente, recomendamos que você desconecte todos os aplicativos na seção (Outras conexões) das Configurações do Connections .\n");
+	        printf("\n Para garantir que seu caso seja tratado da maneira mais rápida possível, escolha entre as opções de contato corretas com base no que está acontecendo. \n\n");
+	        
+		  }
+		  if (strcmp(word3,"B")==0||strcmp(word3,"b")==0){
+		  	 printf("\n=> Suspensões da Conta:");
+		  	 printf("\nSuspendemos contas que violam os nossos Termos de Serviço e/ou Diretrizes da Comunidade. \n");
+		     printf("A maioria das violações resultará numa suspensão de 24 horas e um aviso aplicado à conta. \n");
+			 printf("Se a tua conta for suspensa, não poderás aceder ou usar os serviços da Twitch, incluindo assistir a transmissões, transmitir e participar nos chats. \n");
+		 	 printf("Quando o período de 24 horas terminar, poderás voltar a utilizar os nossos serviços. Após dois avisos, a próxima violação resultará numa suspensão indefinida, \n");
+			 printf("mas algumas violações mais graves resultarão numa suspensão indefinida na primeira violação. Em alguns casos, \n");
+		     printf("também poderemos remover conteúdo associado com violações das nossas políticas.\n\n");
+		   	 printf("=>Recorrer de um banimento específico a um canal:\n");
+		  	 printf("Se foste banido do chat de um canal em específico, deverás contactar o proprietário do canal ou um dos moderadores desse canal caso desejes recorrer do banimento.\n");
+		     printf("Os proprietários e moderadores dos canais têm liberdade para banir qualquer utilizador do seu canal, seja qual for o motivo.\n");
+			 printf("A equipe da Twitch não te poderá ajudar a reverter banimentos específicos a canais.Poderás recorrer do banimento de um canal,\n");
+			 printf("mas a utilização abusiva de Sussurros ou outras funcionalidades para atacar ou assediar alguém devido a seres banido de um canal (ou por qualquer outro motivo) levará à suspensão da(s) tua(s) conta(s).\n");
+		  }
+		   if (strcmp(word3,"C")==0||strcmp(word3,"c")==0){
+		  	printf("\n=> Autenticação em dois fatores com Authy\n");
+		  	printf("A Twitch agora oferece uma autenticação em dois fatores (2FA) para proteger sua conta contra logins não autorizados.\n");
+			printf("A 2FA requer dois métodos diferentes de verificação para que o login na sua conta da Twitch seja realizado: sua senha e seu telefone celular. \n");
+			printf("Caso sua senha tenha sido comprometida, sua conta ficará inacessível sem o código exclusivo enviado para seu telefone.\n");
+		  	printf("\n=>Ativar 2FA na Twitch:\n");
+		  	printf("Para configurar a autenticação de dois fatores, você precisará de uma conta verificada do Twitch e acesso a um computador.\n\n");
+		  	printf("1-Acesse a seção Segurança em Configurações\n");
+		  	printf("2-Selecione Ativar Autenticação de dois fatores\n");
+		    printf("3-Insira sua senha do Twitch\n");
+		  	printf("4-Insira o número do seu telefone\n");
+		  	printf("5-Insira o código de verificação que você recebeu por mensagem de texto ou pelo Authy (se você for um usuário do Authy).\n\n");
+		  } 
+		  if (strcmp(word3,"D")==0||strcmp(word3,"d")==0){
+		  	printf("\n=> Políticas de renomeação e reciclagem de nomes de usuário:");
+		  	printf("\nOs nomes de usuário da Twitch são fornecidos ao primeiro indivíduo que solicitar um nome de usuário disponível. Para esclarecer, isso significa que a prioridade é por ordem de solicitação.\n\n");
+		  	printf("No entanto, os nomes de usuário podem ser liberados para serem registrados novamente, sem aviso prévio, se:\n");
+		  	printf("1-violarem marcas registradas específicas\n");
+		  	printf("2-estiverem envolvidos em casos de indivíduos se passando ativamente por outra pessoa (tenha em mente que alguém registrar primeiro o nome de usuário que você deseja NÃO se enquadra nesses casos)\n");
+		  	printf("3-não estiverem mais ativos, ou seja, caso não haja nenhuma atividade de visualização ou login associada à conta pelos últimos 12 meses.\n");
+		  	printf("\nCom todas as contas reivindicadas, a Twitch excluirá as informações do perfil associadas à conta (incluindo qualquer conteúdo contido nela). \n");
+		    printf("Isso também significa que quaisquer dados pessoais e conteúdos privados associados a essas contas serão excluídos e não estarão acessíveis para o novo dono da conta.\n");
+		  	printf("\n=>Como mudar o seu nome de usuário:\n");
+		  	printf("1-Primeiro, vá até a sua página de configurações e digite no campo o nome de usuário que você deseja. \n");
+			printf("Observação: é necessário ter um e-mail verificado para realizar a mudança de nome de usuário. Caso não tenha um e-mail verificado, será solicitado que você faça uma verificação.\n");
+		  	printf("2-Em seguida, clique em Verificar e faça a autenticação com a sua senha.\n\n");
+		  	printf("Observação: uma vez que o seu nome for alterado, os nomes de usuário abandonados serão mantidos pelo Twitch por, no mínimo, 6 meses. Após esse período, podemos decidir retornar esses nomes de usuário aos nomes de usuário disponíveis para a comunidade e novos usuários.\n\n");
+		  }	
+		    
+	 }	 	
+	     if (strstr(word2,"Geral")!=0||strstr(word2,"geral")!=0||strcmp(word2,"B")==0||strcmp(word2,"b")==0){
+	     	printf("\nGeral:\n");
+	     	printf("A-Como o Resumo da transmissão funciona?\n");
+	     	printf("B-Softwares recomendados para transmissão \n");
+	     	printf("C-Juntando-se ao Programa de afiliados \n\n-");
+	     	gets(word3);
+	         if(strcmp(word3,"A")==0||strcmp(word3,"a")==0){
+	         	printf("\n=> Como o Resumo da transmissão funciona?\n");
+	         	printf("\nO seu Resumo da transmissão está sempre pronto cerca de 10 minutos depois que a sua transmissão acabar.");
+	         	printf("\nVocê também pode encontrar o seu Resumo da transmissão no topo do seu painel de controle ao vivo e no menu de painel de controle esquerdo.");
+	         	printf("\nO seu Resumo da transmissão conterá as seguintes informações:\n");
+	         	printf("\n=>Estatísticas.");
+	         	printf("\n=>Gráficos.");
+	         	printf("\n=>Quais foram os meus melhores clipes?");
+	         	printf("\n=>De onde vieram as minhas visualizações?");
+	         	printf("\n=>Qual é o vídeo da minha transmissão?");
+	         	printf("\n=>Conquistas.");
+	         	printf("\n=>Dicas.");
+	         	printf("\n");
+	         	printf("\nAlternar entre os resumos de transmissão é tão simples quanto clicar nas setas ou na data/número da transmissão no topo do resumo, você, então, poderá selecionar um resumo disponível.");
+			 }
+			 if(strcmp(word3,"B")==0||strcmp(word3,"b")==0){
+			 	printf("\n=> Softwares recomendados para transmissão.\n");
+			 	printf("\nPara começar a fazer transmissões na Twitch, você precisará decidir qual aplicativo de transmissão deseja usar. ");
+			 	printf("\nAbaixo, listamos algumas escolhas comuns que outros streamers usam e recomendam para novo streamers.");
+			 	printf("\nCada um tem seus próprios benefícios, portanto, recomendamos pesquisar e tomar a sua decisão com base no que você precisa.\n");
+			 	printf("\n1-OBS Project");
+			 	printf("\n2-XSplit");
+			 	printf("\n3-XSplit Gamecaster");
+			 	printf("\n4-Gameshow Live");
+			 	printf("\n5-Bebo");
+			 	printf("\n6-Wirecast");
+			 	printf("\n7-Vmix");
+			 	printf("\n8-Elgato Game Capture");
+			 	printf("\n9-Live Gamer Extreme");
+			 }
+		     if(strcmp(word3,"C")==0||strcmp(word3,"c")==0){
+		     	printf("\n=> Juntando-se ao Programa de afiliados. \n");
+		     	printf("\nÉ possível que o critério para se tornar um afiliado mude à medida que o programa desenvolve.");
+		     	printf("\nNo lançamento, convidaremos streamers não parceiros que possuem:\n");
+		     	printf("\n=>Pelo menos 500 minutos totais de transmissão nos últimos 30 dias.");
+		     	printf("\n=>Pelo menos 7 dias de transmissão exclusivos nos últimos 30 dias.");
+		     	printf("\n=>Uma média de 3 espectadores simultâneos ou mais ao longo de 30 dias.");
+		     	printf("\n=>Pelo menos 50 seguidores.\n");
+		     	printf("\nEm algumas semanas após o seu canal se tornar elegível, você receberá um convite no seu e-mail, na área de notificação no canto direito superior da plataforma twitch.tv e na aba Painel de controle ao vivo.");
+		 }  
+		  }		     
+		 if (strstr(word2,"Pagamento")!=0||strstr(word2,"pagamento")!=0||strcmp(word2,"C")==0||strcmp(word2,"c")==0){
+		 	printf("\nProblemas de Pagamento:\n");
+		 	printf("A-Atualizando informações de pagamento e histórico de transações.\n");
+		 	printf("B-Realizei o pagamento, mas a minha inscrição de canal não está ativa.\n");
+		 	printf("C-Posso alterar o método de pagamento da minha inscrição de canal?\n");
+		 	printf("D-Erro ao realizar pagamento de Bits via PayPal.\n\n-");
+		 	gets(word3);
+		 	 if(strcmp(word3,"A")==0||strcmp(word3,"a")==0){
+		 	  printf("\n=> Atualizando informações de pagamento e histórico de transações.\n");
+		 	  printf("\nPara começar, acesse a sua página de Gerenciamento de pagamentos.");
+		 	  printf("\nNela, você verá uma lista dos seus métodos de pagamento atuais e uma lista de inscrições atualmente utilizando esses métodos de pagamento.");
+		 	  printf("\nQuando você atualizar o método de pagamento, todas as inscrições que seriam renovadas de acordo com o método de pagamento antigo agora serão cobradas de acordo com o novo.");
+		 	  printf("\nA maior parte dos métodos de pagamento pode ser gerenciada e atualizada nesta página usando o botão 'Atualizar' ao lado do método de pagamento.");
+		 	  printf("\nOutros métodos de pagamento podem exigir que você os gerencie em uma página fornecida pelo provedor do pagamento.");
+		 	  printf("\nAlém disso, você pode encontrar o seu histórico de transações na página Gerenciamento de pagamentos ao clicar na aba 'Histórico de transações' no topo da página.");
+		 	  printf("\nNa sua página de histórico de transações, você pode filtrar as suas transações entre datas, produtos ou inscrições específicas.");
+		 	  
+		 	  
+			 }
+			 if(strcmp(word3,"B")==0||strcmp(word3,"b")==0){
+		 	   printf("\n=> Realizei o pagamento, mas a minha inscrição de canal não está ativa.\n");
+		 	   printf("\nNão se preocupe!");
+		 	   printf("\nEmbora alguns métodos de pagamento levem mais tempo do que outros para serem processados (verificação, etc.), será mais do que um prazer ajudá-lo.");
+		 	   printf("\nEntre em contato conosco para que possamos investigar o que aconteceu.");
+		 	   printf("\nInclua o seu ID de transação/fatura, o seu nome de usuário no site e a inscrição que você tentou comprar. ");
+		 	   printf("\nVocê pode entrar em contato conosco diretamente ao utilizar o nosso formulário de e-mail e selecionar Inscrições como o seu problema.");
+		 	  
+		 }
+		     if(strcmp(word3,"C")==0||strcmp(word3,"c")==0){
+		        printf("\n=> Posso alterar o método de pagamento da minha inscrição de canal?\n");
+		        printf("\nVocê pode alterar o seu método de pagamento ao acessar a sua página de Gerenciamento de pagamentos e atualizar as suas informações de pagamento para a inscrição.");
+		        printf("\nDeve-se notar que se você tem várias inscrições sob um método de pagamento, você atualizará o método de pagamento para essas inscrições também.");
+       }
+             if(strcmp(word3,"D")==0||strcmp(word3,"d")==0){
+		        printf("\n=> Erro ao realizar pagamento de Bits via PayPal.\n");
+		        printf("\nAo comprar Bits usando o PayPal como prestador de serviços, você pode receber a seguinte mensagem de erro:");
+		        printf("\nOh nooooooes! Looks like we encountered an error. Please try again.\n");
+		        printf("\n1-Tente realizar os seguintes métodos de solução de problemas:");
+		        printf("\n2-Clique em Tentar novamente e tente usar o mesmo método de pagamento que antes.");
+		        printf("\n3-Clique em Tentar novamente e altere o seu método de pagamento para um método de pagamento diferente, como cartão de crédito.");
+		        printf("\n4-Verifique a sua fonte de financiamento para garantir que não haja problemas.");
+		        printf("\n5-Se estiver utilizando o saldo da sua conta do PayPal, tente adicionar fontes de financiamento alternativas à conta do PayPal.");
+		        printf("\n6-Não utilize VPN ou um serviço de falsificação de IP.");
+		        printf("\n7-Garanta que a sua conta do PayPal esteja configurada com informações pessoais precisas, incluindo o seu endereço de faturamento e entrega.");
+		     
+	    }
+}
+         if (strstr(word2,"Aplicativos")!=0||strstr(word2,"aplicativos")!=0||strcmp(word2,"D")==0||strcmp(word2,"d")==0){ 
+             printf("\nAplicativos:\n");
+             printf("\nA-Utilizando o aplicativo Android da Twitch.");
+             printf("\nB-Utilizando o aplicativo iOS da Twitch.\n\n-");
+             gets(word3);
+             if(strcmp(word3,"A")==0||strcmp(word3,"a")==0){
+             	printf("\n=> Utilizando o aplicativo Android da Twitch.\n");
+             	printf("\nQuando você tiver baixado o aplicativo Android da Twitch, você precisará fazer login na sua conta existente da Twitch ou criar uma nova.");
+             	printf("\nTer uma conta permitirá que você acompanhe todos os streamers que você segue, bem como receba notificações por push quando eles entrarem ao vivo.");
+             	printf("\nO aplicativo também permite que você veja as streams da Twitch por meio de dados celulares e redes Wi-Fi, participe do chat, utilize o Chromecast para assistir às suas transmissões favoritas na telona e muito mais.");
+             	printf("\n\nNa aba Ao vivo, você encontrará todas as informações em tempo real das pessoas que você se segue ou é amigo.");
+             	printf("\nAqui, você encontrará os canais ao vivo que você segue, canais que estão hospedando, amigos e sussurros.\n");
+             	printf("\nNa aba Pulse, você pode encontrar o que está Em alta em toda a Twitch, desde streamers que você segue a conteúdos recomendados com base no seu histórico de visualização e em quem você segue.\n");
+             	printf("\nNa aba Busca, você verá os jogos que você segue localizados na parte superior para facilitar a navegação.");
+             	printf("\nAbaixo, você encontrará uma lista de todos os jogos ordenados por número total de espectadores que estão assistindo a conteúdos ao vivo para o jogo em questão.");
+             	printf("\nPor padrão, começamos a reordenar as transmissões no diretório de busca de acordo com o idioma no qual o seu dispositivo está configurado.");
+             	printf("\nVocê pode desativar esta opção nas configurações do aplicativo.");
+             	
+             	
+             }
+             if(strcmp(word3,"B")==0||strcmp(word3,"b")==0){
+             	printf("\n=> Utilizando o aplicativo iOS da Twitch.\n");
+             	printf("\nQuando você tiver baixado o aplicativo iOS da Twitch, você precisará fazer login na sua conta existente da Twitch ou criar uma nova.");
+             	printf("\nTer uma conta permitirá que você acompanhe todos os streamers que você segue, bem como receber notificações por push quando eles entrarem ao vivo.");
+             	printf("\nO aplicativo também permite que você veja as transmissões da Twitch por meio de dados celulares e redes Wi-Fi, participe do chat, utilize o Airplay para assistir às suas transmissões favoritas na telona e muito mais.");
+             	printf("\n\nNa aba Ao vivo, você encontrará todas as informações em tempo real das pessoas que você se segue ou é amigo.");
+             	printf("\nAqui, você encontrará os canais ao vivo que você segue, canais que estão hospedando, amigos e sussurros.\n");
+             	printf("\nNa aba Pulse, você pode encontrar o que está Em alta em toda a Twitch, desde streamers que você segue a conteúdos recomendados com base no seu histórico de visualização e em quem você segue.\n");
+             	printf("\nNa aba Busca, você verá os jogos que você segue localizados na parte superior para facilitar a navegação. ");
+             	printf("\nAbaixo, você encontrará uma lista de todos os jogos ordenados por número total de espectadores que estão assistindo a conteúdos ao vivo para o jogo em questão.");
+             	printf("\nPor padrão, começamos a reordenar as transmissões no diretório de busca de acordo com o idioma no qual o seu dispositivo está configurado.");
+             	printf("\nVocê pode desativar esta opção nas configurações do aplicativo.");
+             	
+             	
+             }
+         
+         
+              
+    }
+     }
+     
+            printf("\n\n-Necessita de Algo mais? S/N\n");
+		 	  printf("\n-");
+		    gets(wordend);
+			if(strcmp(wordend,"n")==0||strcmp(wordend,"N")==0||strstr(wordend,"Nao")!=0||strstr(wordend,"nao")!=0){
+				goto fim;   
+	 } /*Fim do B-Suporte */
+	
+	if (strstr(word,"Categorias")!=0||strstr(word,"categorias")!=0||strcmp(word,"A")==0||strcmp(word,"a")==0){ /* Inicio de A-Categorias */
+		printf("\nCategorias:\n");
+		printf("A-Tendências.\n");
+		printf("B-Ação.\n");
+		printf("C-Aventura. \n");
+		printf("D-Esportes. \n");
+		printf("E-Estratégia.\n");
+		printf("F-Tiro.\n");
+		printf("G-Corrida.\n");
+		printf("H-RPG.(Melhor categoria)\n");
+		printf("I-MOBA. \n");
+		printf("J-Outros.\n\n-");
+		gets(word2);
+		if (strstr(word2,"Tendencias")!=0||strstr(word2,"tendencias")!=0||strcmp(word2,"A")==0||strcmp(word2,"a")==0){
+			printf("\n=> Tendências:\n");
+			printf("-League of Legends com 241 mil espectadores.");
+			printf("\n-Fortnite com 205 mil espectadores.");
+			printf("\n-Just Chatting com 121 mil espectadores.");
+			printf("\n-Grand Theft Auto V com 105,5 mil espectadores.");
+			printf("\n-Counter-Strike Global Offensive com 102 mil espectadores.");
+		}
+		if (strstr(word2,"Açao")!=0||strstr(word2,"açao")!=0||strcmp(word2,"B")==0||strcmp(word2,"b")==0){
+			printf("\n=> Ação:\n");
+			printf("-Grand Theft Auto V");
+			printf("\n-Path of Exile");
+			printf("\n-Minecraft");
+			printf("\n-Dead by Daylight");
+			printf("\n-World of Tanks");
+			printf("\n-Dark Souls II");
+			printf("\n-World of Warships");
+			printf("\n-Dauntless");
+			printf("\n-Rocket League");
+			printf("\n-ARK");
+			printf("\n....");
+		}
+		if (strstr(word2,"Aventura")!=0||strstr(word2,"aventura")!=0||strcmp(word2,"C")==0||strcmp(word2,"c")==0){
+			printf("\n=> Aventura:\n");
+			printf("-Grand Theft Auto V");
+			printf("\n-Outer Wilds");
+			printf("\n-Danganronpa: Trigger Happy Havoc");
+			printf("\n-Rust");
+			printf("\n-Tibia");
+			printf("\n-Super Mario 64");
+			printf("\n-Resident Evil 2");
+			printf("\n-The Legend of Zelda: Breath of the Wild");
+			printf("\n-The Witcher 3: Wild Hunt");
+			printf("\n-Dark Souls III");
+			printf("....");
+		}
+	    if (strstr(word2,"Esportes")!=0||strstr(word2,"esportes")!=0||strcmp(word2,"D")==0||strcmp(word2,"D")==0){
+			printf("\n=> Esportes:\n");
+			printf("-FIFA 19");
+			printf("\n-Rocket League");
+			printf("\n-NBA 2K19");
+			printf("\n-Football Manager 2019");
+			printf("\n-MLB The Show 19");
+			printf("\n-Russian Fishing 4");
+			printf("\n-Blood Bowl 2");
+			printf("\n-Madden NFL 19");
+			printf("\n-WWE 2K19");
+			printf("\n-NHL 17");
+			printf("....");
+		}
+		if (strstr(word2,"Estrategia")!=0||strstr(word2,"estrategia")!=0||strcmp(word2,"E")==0||strcmp(word2,"e")==0){
+			printf("\n=> Estratégia:\n");
+			printf("-Chess");
+			printf("\n-Slay the Spire");
+			printf("\n-StarCraft II");
+			printf("\n-Total War: Three Kingdoms");
+			printf("\n-Warcraft III: The Frozen Throne");
+			printf("\n-Diablo III: Reaper of Souls");
+			printf("\n-Heroes of Might and Magic III: The Shadow of Death");
+			printf("\n-Minion Masters");
+			printf("\n-Hearts of Iron IV");
+			printf("\n-Pokémon FireRed/LeafGreen");
+			printf("....");
+		}
+		if (strstr(word2,"Tiro")!=0||strstr(word2,"tiro")!=0||strcmp(word2,"F")==0||strcmp(word2,"f")==0){
+			printf("\n=> Tiro:\n");
+			printf("-Fortnite");
+			printf("\n-Counter-Strike Global Offensive");
+			printf("\n-PLAYERUNKNOWN'S BATTLEGROUNDS");
+			printf("\n-Tom Clancy's Rainbow Six: Siege");
+			printf("\n-Overwatch");
+			printf("\n-Call of Duty: Black Ops 4");
+			printf("\n-Apex Legends");
+			printf("\n-Destiny 2");
+			printf("\n-Danganronpa: Trigger Happy Havoc");
+			printf("\n-Escape From Tarkov");
+			printf("....");
+		}
+		if (strstr(word2,"Corrida")!=0||strstr(word2,"corrida")!=0||strcmp(word2,"G")==0||strcmp(word2,"g")==0){
+			printf("\n=> Corrida:\n");
+			printf("-Grand Theft Auto V");
+			printf("\n-TrackMania² Stadium");
+			printf("\n-Rocket League");
+			printf("\n-Mario Kart 8");
+			printf("\n-MotoGP 19");
+			printf("\n-Euro Truck Simulator 2");
+			printf("\n-Forza Horizon 4");
+			printf("\n-iRacing.com");
+			printf("\n-American Truck Simulator");
+			printf("\n-My Summer Car");
+			printf("....");
+		}
+		if (strstr(word2,"RPG")!=0||strstr(word2,"rpg")!=0||strcmp(word2,"H")==0||strcmp(word2,"h")==0||strstr(word2,"Melhor categoria")!=0){
+			printf("\n=> RPG:\n");
+			printf("-Path of Exile");
+			printf("\n-Dark Souls II");
+			printf("\n-World of Warcraft");
+			printf("\n-Black Desert Online");
+			printf("\n-Conqueror's Blade");
+			printf("\n-Dungeons & Dragons");
+			printf("\n-Undertale");
+			printf("\n-Mass Effect");
+			printf("\n-Borderlands 2");
+			printf("\n-Tibia");
+			printf("....");
+		}
+		if (strstr(word2,"MOBA")!=0||strstr(word2,"moba")!=0||strcmp(word2,"I")==0||strcmp(word2,"i")==0){
+			printf("\n=> MOBA:\n");
+			printf("-League of Legends");
+			printf("\n-Dota 2");
+			printf("\n-Heroes of the Storm");
+			printf("\n-Smite");
+			printf("\n-Brawl Stars");
+			printf("\n-Heroes of Newerth");
+			printf("\n-Cyphers Online");
+			printf("\n-Mobile Legends: Bang bang");
+			printf("\n-surviv.io");
+			printf("\n-Vainglory");
+			printf("....");
+		}
+		if (strstr(word2,"Outros")!=0||strstr(word2,"outros")!=0||strcmp(word2,"J")==0||strcmp(word2,"j")==0){
+			printf("\n=> Outros:\n");
+			printf("-Just Chatting");
+			printf("\n-Hearthstone");
+			printf("\n-Cooking Simulator");
+			printf("\n-Jump King");
+			printf("\n-Dead by Daylight");
+			printf("\n-Magic: The Gathering");
+			printf("\n-Layers of Fear 2");
+			printf("\n-The Elder Scrolls Online");
+			printf("\n-Art");
+			printf("\n-Just Dance 2019");
+			printf("....");
+		}
+		
+		
+         printf("\n\n-Necessita de Algo mais? S/N\n");
+		 	  printf("\n-");
+		    gets(wordend);
+			if(strcmp(wordend,"n")==0||strcmp(wordend,"N")==0||strstr(wordend,"Nao")!=0||strstr(wordend,"nao")!=0){
+				goto fim;
+			 
+		
+	}
+	
+} /* Fim de A-Categorias */
+}
+
+  fim:
+  	printf("\nNós pudemos te ajudar? S/N \n\n-");
+  	  gets(word4);
+  	if (strstr(word4,"Nao")!=0||strstr(word4,"nao")!=0||strstr(word4,"n")!=0||strstr(word4,"N")!=0||strstr(word4,"Não")!=0||strstr(word4,"não")){
+  		printf("\n=( Obrigado mesmo assim por utilizar nosso Suporte");
+	  }
+  	if (strstr(word4,"Sim")!=0||strstr(word4,"sim")!=0||strstr(word4,"s")!=0||strstr(word4,"S")!=0){	  
+	  printf("\nAvalie nosso atendimento (0 a 10)\n\n-");
+	  scanf("%d",&av);
+	  printf("\n\nObrigado por utilizar nosso Suporte! ^^\n");
+}
+	
+	
+	return 0;
+}
