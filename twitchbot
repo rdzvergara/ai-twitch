@@ -271,7 +271,7 @@ int main () {
          
          
               
-    }
+    
      }
      
             printf("\n\n-Necessita de Algo mais? S/N\n");
@@ -280,7 +280,7 @@ int main () {
 			if(strcmp(wordend,"n")==0||strcmp(wordend,"N")==0||strstr(wordend,"Nao")!=0||strstr(wordend,"nao")!=0){
 				goto fim;   
 	 } /*Fim do B-Suporte */
-	
+	}
 	if (strstr(word,"Categorias")!=0||strstr(word,"categorias")!=0||strcmp(word,"A")==0||strcmp(word,"a")==0){ /* Inicio de A-Categorias */
 		printf("\nCategorias:\n");
 		printf("A-Tendências.\n");
@@ -302,7 +302,7 @@ int main () {
 			printf("\n-Grand Theft Auto V com 105,5 mil espectadores.");
 			printf("\n-Counter-Strike Global Offensive com 102 mil espectadores.");
 		}
-		if (strstr(word2,"Açao")!=0||strstr(word2,"açao")!=0||strcmp(word2,"B")==0||strcmp(word2,"b")==0){
+		if (strstr(word2,"Acao")!=0||strstr(word2,"acao")!=0||strcmp(word2,"B")==0||strcmp(word2,"b")==0){
 			printf("\n=> Ação:\n");
 			printf("-Grand Theft Auto V");
 			printf("\n-Path of Exile");
