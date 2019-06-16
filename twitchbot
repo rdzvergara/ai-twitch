@@ -1,10 +1,6 @@
 #include <stdio.h> /*Biblioteca Padrão*/
-#include <math.h>  /*Biblioteca para questões matemáticas*/
 #include <stdlib.h> /*Biblioteca para conversão de var.*/
-#include <time.h>  /*Biblioteca para definição de tempo*/
 #include <string.h> /*Biblioteca de String*/
-#include <iostream> /*Biblioteca Padrão de C++*/
-#include <Windows.h> /*Biblioteca para Windows */
 #include <locale.h> /*Biblioteca para acentuação*/
 #define gets(a) fgets(a,sizeof(a),stdin);  a[strcspn(a, "\n")] = '\0';
 #define t 500
@@ -47,7 +43,7 @@ int main () {
        printf("\n\n-Necessita de Algo mais? S/N\n");
 		 	  printf("\n-");
 		    gets(wordend);
-			if(strcmp(wordend,"n")==0||strcmp(wordend,"N")==0||strstr(wordend,"Nao")!=0||strstr(wordend,"nao")!=0){
+			if(strcmp(wordend,"n")==0||strcmp(wordend,"N")==0||strstr(wordend,"Nao")!=0||strstr(wordend,"nao")!=0||strstr(wordend,"Não")!=0||strstr(wordend,"não")!=0){
 				goto fim;
 			
 	} 
@@ -68,7 +64,7 @@ int main () {
 	 	printf("C-Autenticação em dois fatores com Authy.\n");
 	 	printf("D-Políticas de renomeação e reciclagem de nomes de usuário.\n\n-");
 	 	gets(word3);
-	 	 if (strcmp(word3,"A")==0||strcmp(word3,"a")==0){
+	 	 if (strcmp(word3,"A")==0||strcmp(word3,"a")==0||strstr(word3,"Hackeada")!=0||strstr(word3,"hackeada")!=0){
 	 	 	printf("\n=> Conta Hackeada,O que Fazer?\n");
 	 	 	printf("\nSe você acredita que sua conta foi comprometida, é muito importante que você altere sua senha o mais rápido possível. \n");
 	        printf("Recomendamos também que você configure imediatamente a autenticação de dois fatores (2FA) para fornecer uma camada adicional de segurança.\n");
@@ -95,7 +91,7 @@ int main () {
 	        printf("\n Para garantir que seu caso seja tratado da maneira mais rápida possível, escolha entre as opções de contato corretas com base no que está acontecendo. \n\n");
 	        
 		  }
-		  if (strcmp(word3,"B")==0||strcmp(word3,"b")==0){
+		  if (strcmp(word3,"B")==0||strcmp(word3,"b")==0||strstr(word3,"suspensão")!=0||strstr(word3,"suspensões")!=0||strstr(word3,"Suspensões")!=0||strstr(word3,"Suspensão")!=0||strstr(word3,"Suspensoes")!=0||strstr(word3,"Suspensao")!=0||strstr(word3,"suspensao")!=0||strstr(word3,"suspensoes")!=0){
 		  	 printf("\n=> Suspensões da Conta:");
 		  	 printf("\nSuspendemos contas que violam os nossos Termos de Serviço e/ou Diretrizes da Comunidade. \n");
 		     printf("A maioria das violações resultará numa suspensão de 24 horas e um aviso aplicado à conta. \n");
@@ -109,8 +105,8 @@ int main () {
 			 printf("A equipe da Twitch não te poderá ajudar a reverter banimentos específicos a canais.Poderás recorrer do banimento de um canal,\n");
 			 printf("mas a utilização abusiva de Sussurros ou outras funcionalidades para atacar ou assediar alguém devido a seres banido de um canal (ou por qualquer outro motivo) levará à suspensão da(s) tua(s) conta(s).\n");
 		  }
-		   if (strcmp(word3,"C")==0||strcmp(word3,"c")==0){
-		  	printf("\n=> Autenticação em dois fatores com Authy\n");
+		   if (strcmp(word3,"C")==0||strcmp(word3,"c")==0||strstr(word3,"Authy")!=0||strstr(word3,"authy")!=0){
+		  	printf("\n=> Autenticação em dois fatores com Authy:\n");
 		  	printf("A Twitch agora oferece uma autenticação em dois fatores (2FA) para proteger sua conta contra logins não autorizados.\n");
 			printf("A 2FA requer dois métodos diferentes de verificação para que o login na sua conta da Twitch seja realizado: sua senha e seu telefone celular. \n");
 			printf("Caso sua senha tenha sido comprometida, sua conta ficará inacessível sem o código exclusivo enviado para seu telefone.\n");
@@ -122,7 +118,7 @@ int main () {
 		  	printf("4-Insira o número do seu telefone\n");
 		  	printf("5-Insira o código de verificação que você recebeu por mensagem de texto ou pelo Authy (se você for um usuário do Authy).\n\n");
 		  } 
-		  if (strcmp(word3,"D")==0||strcmp(word3,"d")==0){
+		  if (strcmp(word3,"D")==0||strcmp(word3,"d")==0||strstr(word3,"renomeação")!=0||strstr(word3,"renomeaçao")!=0){
 		  	printf("\n=> Políticas de renomeação e reciclagem de nomes de usuário:");
 		  	printf("\nOs nomes de usuário da Twitch são fornecidos ao primeiro indivíduo que solicitar um nome de usuário disponível. Para esclarecer, isso significa que a prioridade é por ordem de solicitação.\n\n");
 		  	printf("No entanto, os nomes de usuário podem ser liberados para serem registrados novamente, sem aviso prévio, se:\n");
@@ -145,7 +141,7 @@ int main () {
 	     	printf("B-Softwares recomendados para transmissão \n");
 	     	printf("C-Juntando-se ao Programa de afiliados \n\n-");
 	     	gets(word3);
-	         if(strcmp(word3,"A")==0||strcmp(word3,"a")==0){
+	         if(strcmp(word3,"A")==0||strcmp(word3,"a")==0||strstr(word3,"transmissão")!=0||strstr(word3,"Transmissão")!=0||strstr(word3,"transmissao")!=0||strstr(word3,"Transmissao")!=0){
 	         	printf("\n=> Como o Resumo da transmissão funciona?\n");
 	         	printf("\nO seu Resumo da transmissão está sempre pronto cerca de 10 minutos depois que a sua transmissão acabar.");
 	         	printf("\nVocê também pode encontrar o seu Resumo da transmissão no topo do seu painel de controle ao vivo e no menu de painel de controle esquerdo.");
@@ -160,7 +156,7 @@ int main () {
 	         	printf("\n");
 	         	printf("\nAlternar entre os resumos de transmissão é tão simples quanto clicar nas setas ou na data/número da transmissão no topo do resumo, você, então, poderá selecionar um resumo disponível.");
 			 }
-			 if(strcmp(word3,"B")==0||strcmp(word3,"b")==0){
+			 if(strcmp(word3,"B")==0||strcmp(word3,"b")==0||strstr(word3,"softwares")!=0||strstr(word3,"Softwares")!=0){
 			 	printf("\n=> Softwares recomendados para transmissão.\n");
 			 	printf("\nPara começar a fazer transmissões na Twitch, você precisará decidir qual aplicativo de transmissão deseja usar. ");
 			 	printf("\nAbaixo, listamos algumas escolhas comuns que outros streamers usam e recomendam para novo streamers.");
@@ -175,7 +171,7 @@ int main () {
 			 	printf("\n8-Elgato Game Capture");
 			 	printf("\n9-Live Gamer Extreme");
 			 }
-		     if(strcmp(word3,"C")==0||strcmp(word3,"c")==0){
+		     if(strcmp(word3,"C")==0||strcmp(word3,"c")==0||strstr(word3,"afiliado")!=0||strstr(word3,"Afiliados")!=0){
 		     	printf("\n=> Juntando-se ao Programa de afiliados. \n");
 		     	printf("\nÉ possível que o critério para se tornar um afiliado mude à medida que o programa desenvolve.");
 		     	printf("\nNo lançamento, convidaremos streamers não parceiros que possuem:\n");
@@ -193,7 +189,7 @@ int main () {
 		 	printf("C-Posso alterar o método de pagamento da minha inscrição de canal?\n");
 		 	printf("D-Erro ao realizar pagamento de Bits via PayPal.\n\n-");
 		 	gets(word3);
-		 	 if(strcmp(word3,"A")==0||strcmp(word3,"a")==0){
+		 	 if(strcmp(word3,"A")==0||strcmp(word3,"a")==0||strstr(word3,"Atualiza")!=0||strstr(word3,"atualiza")!=0){
 		 	  printf("\n=> Atualizando informações de pagamento e histórico de transações.\n");
 		 	  printf("\nPara começar, acesse a sua página de Gerenciamento de pagamentos.");
 		 	  printf("\nNela, você verá uma lista dos seus métodos de pagamento atuais e uma lista de inscrições atualmente utilizando esses métodos de pagamento.");
@@ -205,7 +201,7 @@ int main () {
 		 	  
 		 	  
 			 }
-			 if(strcmp(word3,"B")==0||strcmp(word3,"b")==0){
+			 if(strcmp(word3,"B")==0||strcmp(word3,"b")==0||strstr(word3,"Pagamento")!=0||strstr(word3,"pagamento")!=0||strstr(word3,"ativa")!=0||strstr(word3,"Ativa")!=0){
 		 	   printf("\n=> Realizei o pagamento, mas a minha inscrição de canal não está ativa.\n");
 		 	   printf("\nNão se preocupe!");
 		 	   printf("\nEmbora alguns métodos de pagamento levem mais tempo do que outros para serem processados (verificação, etc.), será mais do que um prazer ajudá-lo.");
@@ -214,12 +210,12 @@ int main () {
 		 	   printf("\nVocê pode entrar em contato conosco diretamente ao utilizar o nosso formulário de e-mail e selecionar Inscrições como o seu problema.");
 		 	  
 		 }
-		     if(strcmp(word3,"C")==0||strcmp(word3,"c")==0){
+		     if(strcmp(word3,"C")==0||strcmp(word3,"c")==0||strstr(word3,"Método de Pagamento")!=0||strstr(word3,"Método de pagamento")!=0||strstr(word3,"método de pagamento")!=0){
 		        printf("\n=> Posso alterar o método de pagamento da minha inscrição de canal?\n");
 		        printf("\nVocê pode alterar o seu método de pagamento ao acessar a sua página de Gerenciamento de pagamentos e atualizar as suas informações de pagamento para a inscrição.");
 		        printf("\nDeve-se notar que se você tem várias inscrições sob um método de pagamento, você atualizará o método de pagamento para essas inscrições também.");
        }
-             if(strcmp(word3,"D")==0||strcmp(word3,"d")==0){
+             if(strcmp(word3,"D")==0||strcmp(word3,"d")==0||strstr(word3,"Paypal")!=0||strstr(word3,"PayPal")!=0||strstr(word3,"paypal")!=0){
 		        printf("\n=> Erro ao realizar pagamento de Bits via PayPal.\n");
 		        printf("\nAo comprar Bits usando o PayPal como prestador de serviços, você pode receber a seguinte mensagem de erro:");
 		        printf("\nOh nooooooes! Looks like we encountered an error. Please try again.\n");
@@ -238,7 +234,7 @@ int main () {
              printf("\nA-Utilizando o aplicativo Android da Twitch.");
              printf("\nB-Utilizando o aplicativo iOS da Twitch.\n\n-");
              gets(word3);
-             if(strcmp(word3,"A")==0||strcmp(word3,"a")==0){
+             if(strcmp(word3,"A")==0||strcmp(word3,"a")==0||strstr(word3,"Android")!=0||strstr(word3,"android")!=0){
              	printf("\n=> Utilizando o aplicativo Android da Twitch.\n");
              	printf("\nQuando você tiver baixado o aplicativo Android da Twitch, você precisará fazer login na sua conta existente da Twitch ou criar uma nova.");
              	printf("\nTer uma conta permitirá que você acompanhe todos os streamers que você segue, bem como receba notificações por push quando eles entrarem ao vivo.");
@@ -253,7 +249,7 @@ int main () {
              	
              	
              }
-             if(strcmp(word3,"B")==0||strcmp(word3,"b")==0){
+             if(strcmp(word3,"B")==0||strcmp(word3,"b")==0||strstr(word3,"ios")!=0||strstr(word3,"IOS")!=0||strstr(word3,"Ios")!=0||strstr(wordend,"iOs")!=0){
              	printf("\n=> Utilizando o aplicativo iOS da Twitch.\n");
              	printf("\nQuando você tiver baixado o aplicativo iOS da Twitch, você precisará fazer login na sua conta existente da Twitch ou criar uma nova.");
              	printf("\nTer uma conta permitirá que você acompanhe todos os streamers que você segue, bem como receber notificações por push quando eles entrarem ao vivo.");
@@ -277,10 +273,10 @@ int main () {
             printf("\n\n-Necessita de Algo mais? S/N\n");
 		 	  printf("\n-");
 		    gets(wordend);
-			if(strcmp(wordend,"n")==0||strcmp(wordend,"N")==0||strstr(wordend,"Nao")!=0||strstr(wordend,"nao")!=0){
+			if(strcmp(wordend,"n")==0||strcmp(wordend,"N")==0||strstr(wordend,"Nao")!=0||strstr(wordend,"nao")!=0||strstr(wordend,"Não")!=0||strstr(wordend,"não")!=0){
 				goto fim;   
 	 } /*Fim do B-Suporte */
-	}
+   }
 	if (strstr(word,"Categorias")!=0||strstr(word,"categorias")!=0||strcmp(word,"A")==0||strcmp(word,"a")==0){ /* Inicio de A-Categorias */
 		printf("\nCategorias:\n");
 		printf("A-Tendências.\n");
@@ -302,7 +298,7 @@ int main () {
 			printf("\n-Grand Theft Auto V com 105,5 mil espectadores.");
 			printf("\n-Counter-Strike Global Offensive com 102 mil espectadores.");
 		}
-		if (strstr(word2,"Acao")!=0||strstr(word2,"acao")!=0||strcmp(word2,"B")==0||strcmp(word2,"b")==0){
+		if (strstr(word2,"Acao")!=0||strstr(word2,"acao")!=0||strstr(word2,"Acão")!=0||strstr(word2,"Acão")!=0||strstr(word2,"Ação")!=0||strstr(word2,"Ação")!=0||strcmp(word2,"B")==0||strcmp(word2,"b")==0){
 			printf("\n=> Ação:\n");
 			printf("-Grand Theft Auto V");
 			printf("\n-Path of Exile");
@@ -330,7 +326,7 @@ int main () {
 			printf("\n-Dark Souls III");
 			printf("....");
 		}
-	    if (strstr(word2,"Esportes")!=0||strstr(word2,"esportes")!=0||strcmp(word2,"D")==0||strcmp(word2,"D")==0){
+	    if (strstr(word2,"Esportes")!=0||strstr(word2,"esportes")!=0||strcmp(word2,"D")==0||strcmp(word2,"d")==0){
 			printf("\n=> Esportes:\n");
 			printf("-FIFA 19");
 			printf("\n-Rocket League");
@@ -433,7 +429,7 @@ int main () {
          printf("\n\n-Necessita de Algo mais? S/N\n");
 		 	  printf("\n-");
 		    gets(wordend);
-			if(strcmp(wordend,"n")==0||strcmp(wordend,"N")==0||strstr(wordend,"Nao")!=0||strstr(wordend,"nao")!=0){
+			if(strcmp(wordend,"n")==0||strcmp(wordend,"N")==0||strstr(wordend,"Nao")!=0||strstr(wordend,"nao")!=0||strstr(wordend,"Não")!=0||strstr(wordend,"não")!=0){
 				goto fim;
 			 
 		
